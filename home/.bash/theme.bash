@@ -4,7 +4,7 @@ PS1=''
 
 # Set the hostname if this isn't running in iTerm
 if [[ -z $ITERM_PROFILE ]]; then
-	PS1='\[$RED\]\h'
+	PS1='\[$RED\]\h '
 fi
 
 PS1+='\[$NORMAL\]\W'
