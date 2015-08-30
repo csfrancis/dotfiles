@@ -1,0 +1,21 @@
+[user]
+name = Scott Francis
+email = scott.francis@shopify.com
+
+[color]
+ui = true
+grep = auto
+
+[core]
+excludesFile=~/.global_gitignore
+
+[alias]
+lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+[push]
+default = simple
+
+[grep]
+lineNumber = true
+patternType = perl
+
