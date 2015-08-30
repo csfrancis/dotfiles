@@ -13,3 +13,7 @@ if [[ -d ~/.chef ]]; then
 knife() { (cd ~/.chef && RUBYOPT=-W0 bx knife "$@") }
 fi
 
+if [[ -d ~/vagrant ]]; then
+vssh() { (cd ~/vagrant && vagrant ssh) }
+fi
+
