@@ -43,4 +43,4 @@ setuptools-*
 .ruby-version
 log/*.log  
 tmp/**/*  
-Procfile.simon
+.bundle

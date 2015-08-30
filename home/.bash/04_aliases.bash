@@ -6,3 +6,10 @@ else
 	alias ls='ls -G'
 fi
 
+alias bx='bundle exec'
+
+if [[ -d ~/.chef ]]; then
+# Disable Ruby warnings for knife
+knife() { (cd ~/.chef && RUBYOPT=-W0 bx knife "$@") }
+fi
+
