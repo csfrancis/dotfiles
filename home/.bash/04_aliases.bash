@@ -11,7 +11,7 @@ alias bx='bundle exec'
 
 if [[ -d ~/.chef ]]; then
   # Disable Ruby warnings for knife
-  knife() { (cd ~/.chef && RUBYOPT=-W0 bx knife "$@") }
+  knife() { (cd ~/.chef && chruby ruby-2.1.7 && bx knife "$@") }
 fi
 
 if [[ -d ~/vagrant ]]; then
