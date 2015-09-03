@@ -55,6 +55,7 @@ set smartindent   " Be smart about indentation
 set expandtab     " Tabs are spaces
 set smarttab
 set shell=$SHELL\ -l  " load shell for ruby version etc.
+set ruler
 
 set tabstop=2 " Tabs are 2 spaces
 set backspace=2 " Backspace deletes 2 spaces
