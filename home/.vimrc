@@ -118,9 +118,8 @@ map <leader>n :NERDTreeToggle<CR>
 map <C-t> :CommandT<CR>
 map <C-g> :CommandTBuffer<CR>
 map <C-/> :CommandTTag<CR>
-let g:CommandTAcceptSelectionSplitMap='<C-x>'
 let g:CommandTMaxHeight=20
-let g:CommandTMaxFiles=50000
+let g:CommandTMaxFiles=10000
 
 cmap w!! w !sudo tee > /dev/null %
 
