@@ -23,7 +23,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 
 " Languages
 NeoBundle 'tpope/vim-liquid'
-NeoBundle 'tpope/vim-markdown'
+NeoBundle 'gabrielelana/vim-markdown'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'vim-scripts/VimClojure'
