@@ -110,6 +110,9 @@ imap <s-tab> <c-n>
 au BufNewFile,BufRead *.ejson set filetype=json
 au BufNewFile,BufRead *.sxx set filetype=stp
 
+" MRI bullshit
+au BufRead,BufNewFile */src/ruby/*.{c,h}    set sw=4 ts=8 softtabstop=8 noet
+
 autocmd BufNewFile,BufRead *.md,*.markdown set spell
 
 autocmd FileType go,gitcommit,qf,gitset setlocal nolist " Go fmt will use tabs
