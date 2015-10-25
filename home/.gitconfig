@@ -19,3 +19,5 @@ default = simple
 lineNumber = true
 patternType = perl
 
+[include]
+  path = ~/.gitconfig.local
