@@ -45,3 +45,4 @@ log/*.log
 tmp/**/*  
 .bundle
 .gitconfig.local
+*.pid
