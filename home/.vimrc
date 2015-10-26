@@ -119,6 +119,8 @@ autocmd FileType go,gitcommit,qf,gitset setlocal nolist " Go fmt will use tabs
 
 map <leader>n :NERDTreeToggle<CR>
 map <leader>l :NERDTreeFind<CR>
+let NERDTreeMapOpenSplit='s'
+let NERDTreeMapOpenVSplit='v'
 
 map <C-t> :CommandT<CR>
 map <C-g> :CommandTBuffer<CR>
