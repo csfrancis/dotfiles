@@ -4,8 +4,8 @@ set -o notify
 
 shopt -s nocaseglob
 
-if [[ "${TERM_PROGRAM}" == "iTerm.app" ]]; then
-  # Fix ctrl-s with command-T in vim
+# Fix ctrl-s with command-T in vim
+if [[ $- == *i* ]]; then
   stty -ixon
 fi
 
