@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CHRUBY_DIR=/usr/local/opt/chruby/share/chruby
-if [[ -d /usr/local/share/chruby ]]; then
+if [[ -d /usr/local/share/chruby && "${SHOPIFY_DEV_VAGRANT}" != "1" ]]; then
   CHRUBY_DIR=/usr/local/share/chruby
 fi
 
