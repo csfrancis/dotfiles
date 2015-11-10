@@ -126,9 +126,9 @@ map <C-t> :CommandT<CR>
 map <C-g> :CommandTBuffer<CR>
 map <C-/> :CommandTTag<CR>
 let g:CommandTMaxHeight=20
-let g:CommandTMaxFiles=10000
+let g:CommandTMaxFiles=50000
 
-cmap w!! w !sudo tee > /dev/null %
+cmap w!! w !sudo tee > /dev/null % 2>&1
 
 set shell=bash\ --login
 
