@@ -6,11 +6,13 @@ if [[ -d /usr/local/share/chruby && "${SHOPIFY_DEV_VAGRANT}" != "1" ]]; then
 fi
 
 if [[ -r "${CHRUBY_DIR}/chruby.sh" ]]; then
-	source "${CHRUBY_DIR}/chruby.sh"
-	RUBIES=(~/.rubies/*)
+  source "${CHRUBY_DIR}/chruby.sh"
+  RUBIES=(~/.rubies/*)
 
-	chruby 2.2.3
+  if [[ `hostname -s` != "vagrant" ]]; then
+    chruby 2.2.3
+  fi
 
-	source "${CHRUBY_DIR}/auto.sh"
+  source "${CHRUBY_DIR}/auto.sh"
 fi
 
