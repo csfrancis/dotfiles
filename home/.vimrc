@@ -133,3 +133,7 @@ cmap w!! w !sudo tee > /dev/null % 2>&1
 set shell=bash\ --login
 
 set wildignore+=.git/**,public/assets/**,vendor/**,log/**,tmp/**,Cellar/**,app/assets/images/**,_site/**,home/.vim/bundle/**,**/.gitkeep,**/.DS_Store,**/*.netrw*,node_modules/*
+
+map <leader>gb :Gblame<CR>
+map <leader>gd :Gdiff<CR>
+map <leader>gs :Gstatus<CR>
