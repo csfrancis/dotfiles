@@ -123,7 +123,6 @@ let NERDTreeMapOpenSplit='s'
 let NERDTreeMapOpenVSplit='v'
 
 map <C-t> :CommandT<CR>
-map <C-g> :CommandTBuffer<CR>
 map <C-/> :CommandTTag<CR>
 let g:CommandTMaxHeight=20
 let g:CommandTMaxFiles=50000
