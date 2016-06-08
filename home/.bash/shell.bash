@@ -6,7 +6,7 @@ shopt -s nocaseglob
 
 # Fix ctrl-s with command-T in vim
 if [[ $- == *i* ]]; then
-  stty -ixon
+  stty -ixon > /dev/null 2>&1
 fi
 
 export EDITOR=vim
