@@ -10,8 +10,10 @@ fi
 alias bx='bundle exec'
 
 if [[ -d ~/.chef ]]; then
-  # Disable Ruby warnings for knife
-  knife() { (cd ~/.chef && BUNDLE_GEMFILE=~/.chef/Gemfile bx knife "$@") }
+  knife() {(
+    [[ -f /opt/dev/dev.sh ]] && source /opt/dev/dev.sh
+    cd ~/.chef && BUNDLE_GEMFILE=~/.chef/Gemfile bx knife "$@"
+  )}
 fi
 
 if [[ -d ~/vagrant ]]; then
