@@ -113,6 +113,9 @@ au BufNewFile,BufRead *.sxx set filetype=stp
 " MRI bullshit
 au BufRead,BufNewFile */src/ruby/*.{c,h}    set sw=4 ts=8 softtabstop=8 noet
 
+" LuaJIT bullshit
+au BufRead,BufNewFile */src/LuaJIT/*.{c,h}  set sw=2 ts=8 softtabstop=2 noet
+
 autocmd BufNewFile,BufRead *.md,*.markdown set spell
 
 autocmd FileType go,gitcommit,qf,gitset setlocal nolist " Go fmt will use tabs
