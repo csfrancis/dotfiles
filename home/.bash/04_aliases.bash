@@ -21,3 +21,4 @@ if [[ -d ~/vagrant ]]; then
 fi
 
 alias gpg='gpg2'
+alias vim='nvim'

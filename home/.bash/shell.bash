@@ -10,5 +10,5 @@ if [[ $- == *i* ]]; then
 fi
 
 export EDITOR=vim
-export TERM=screen-256color
+export TERM=xterm-256color
 export HISTFILESIZE=100000
