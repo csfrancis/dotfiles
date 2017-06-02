@@ -19,6 +19,7 @@ NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes\| ./install' }
 NeoBundle 'junegunn/fzf.vim'
+NeoBundle 'roxma/vim-tmux-clipboard'
 
 " Languages
 NeoBundle 'tpope/vim-liquid'
@@ -55,7 +56,6 @@ set incsearch     " Search as you type
 set smartindent   " Be smart about indentation
 set expandtab     " Tabs are spaces
 set smarttab
-set shell=$SHELL\ -l  " load shell for ruby version etc.
 set ruler
 
 set tabstop=2 " Tabs are 2 spaces
@@ -126,10 +126,13 @@ let NERDTreeMapOpenSplit='s'
 let NERDTreeMapOpenVSplit='v'
 
 map <C-t> :Files<CR>
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
 
 cmap w!! w !sudo tee > /dev/null % 2>&1
-
-set shell=bash\ --login
 
 set wildignore+=.git/**,public/assets/**,vendor/**,log/**,tmp/**,Cellar/**,app/assets/images/**,_site/**,home/.vim/bundle/**,**/.gitkeep,**/.DS_Store,**/*.netrw*,node_modules/*
 
