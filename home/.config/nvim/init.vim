@@ -20,6 +20,7 @@ NeoBundle 'tpope/vim-commentary'
 NeoBundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes\| ./install' }
 NeoBundle 'junegunn/fzf.vim'
 NeoBundle 'roxma/vim-tmux-clipboard'
+NeoBundle 'mileszs/ack.vim'
 
 " Languages
 NeoBundle 'tpope/vim-liquid'
@@ -143,3 +144,6 @@ map <leader>gs :Gstatus<CR>
 autocmd Syntax c,cpp,vim,xml,html,xhtml setlocal foldmethod=syntax
 autocmd Syntax c,cpp,vim,xml,html,xhtml normal zR
 
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
