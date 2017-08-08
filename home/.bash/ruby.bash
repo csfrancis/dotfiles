@@ -11,7 +11,7 @@ chruby() {
     RUBIES=(~/.rubies/*)
 
     if [[ `hostname -s` != "vagrant" ]]; then
-      chruby 2.2.3
+      chruby 2.3.1
     fi
 
     source "${CHRUBY_DIR}/auto.sh"
