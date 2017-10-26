@@ -8,13 +8,13 @@ set rtp+=~/.config/nvim/bundle/neobundle.vim
 call neobundle#begin(expand('~/.config/nvim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'teoljungberg/vim-grep'
 
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/syntastic'
 
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-rhubarb'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes\| ./install' }
@@ -32,6 +32,8 @@ NeoBundle 'vim-scripts/VimClojure'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'fatih/vim-go'
+
+NeoBundle 'junegunn/goyo.vim'
 
 call neobundle#end()
 
@@ -140,6 +142,7 @@ set wildignore+=.git/**,public/assets/**,vendor/**,log/**,tmp/**,Cellar/**,app/a
 map <leader>gb :Gblame<CR>
 map <leader>gd :Gdiff<CR>
 map <leader>gs :Gstatus<CR>
+map <leader>gB :Gbrowse<CR>
 
 autocmd Syntax c,cpp,vim,xml,html,xhtml setlocal foldmethod=syntax
 autocmd Syntax c,cpp,vim,xml,html,xhtml normal zR
@@ -147,3 +150,8 @@ autocmd Syntax c,cpp,vim,xml,html,xhtml normal zR
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+" Searching
+nmap <M-e> :Ack! "\b<cword>\b"<CR>
+nmap <M-g> :Ggrep! "\b<cword>\b"<CR>
+
