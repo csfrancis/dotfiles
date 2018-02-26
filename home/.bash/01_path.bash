@@ -4,7 +4,7 @@ if [[ -d /usr/local/bin ]]; then
 	export PATH="/usr/local/bin:$PATH"
 fi
 
-export GOPATH=~/go
+export GOPATH=~
 
 if [[ -d "${GOPATH}" ]]; then
 	export PATH="$PATH:$GOPATH/bin"
