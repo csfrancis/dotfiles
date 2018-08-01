@@ -1,3 +1,4 @@
+export KUBECONFIG=~/.kube/config
 export KUBECTL_NS=shopify-core
 
 kubessh() {

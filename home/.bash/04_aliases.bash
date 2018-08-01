@@ -22,3 +22,4 @@ fi
 
 alias gpg='gpg2'
 alias vim='nvim'
+alias k='kubectl'
