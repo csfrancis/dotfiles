@@ -155,3 +155,4 @@ endif
 nmap <M-e> :Ack! "\b<cword>\b"<CR>
 nmap <M-g> :Ggrep! "\b<cword>\b"<CR>
 
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -Wall -Wextra'

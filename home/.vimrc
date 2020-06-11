@@ -1,3 +1,5 @@
+" DO NOT EDIT THIS - use ~/.config/nvim/init.vim
+"
 " BASIC
 set nocompatible " No vi compatility, this first because it resets some options
 let mapleader="," " Mapleader
@@ -6,6 +8,7 @@ set encoding=utf-8
 set history=1000  " Keep more history, default is 20
 set rtp+=~/.vim/bundle/neobundle.vim
 call neobundle#begin(expand('~/.vim/bundle/'))
+
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'teoljungberg/vim-grep'
@@ -18,7 +21,6 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'tpope/vim-commentary'
 
-NeoBundle 'wincent/Command-T'
 NeoBundle 'altercation/vim-colors-solarized'
 
 " Languages
@@ -31,6 +33,8 @@ NeoBundle 'vim-scripts/VimClojure'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'fatih/vim-go'
+
+NeoBundle 'wincent/Command-T'
 
 call neobundle#end()
 
@@ -126,6 +130,7 @@ let NERDTreeMapOpenSplit='s'
 let NERDTreeMapOpenVSplit='v'
 
 map <C-t> :CommandT<CR>
+map <M-t> :CommandT<CR>
 map <C-/> :CommandTTag<CR>
 let g:CommandTMaxHeight=20
 let g:CommandTMaxFiles=50000
@@ -142,3 +147,7 @@ map <leader>gs :Gstatus<CR>
 
 autocmd Syntax c,cpp,vim,xml,html,xhtml setlocal foldmethod=syntax
 autocmd Syntax c,cpp,vim,xml,html,xhtml normal zR
+
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++ -Wall -Wextra'
+

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if ls --version | grep -q GNU; then
+if ls --version 2>&1 | grep -q GNU; then
   eval `dircolors ~/.dir_colors`
   alias ls='ls --color=auto'
 else
