@@ -1,6 +1,7 @@
 [user]
 name = Scott Francis
 email = scott.francis@shopify.com
+	signingkey = 85EDBA8DFEA94E09
 
 [color]
 ui = true
@@ -36,3 +37,5 @@ patternType = perl
 	insteadOf = ssh://git@github.com/shopify/
 [credential]
 	helper = store --file /opt/dev/var/private/git_credential_store
+[commit]
+	gpgsign = true

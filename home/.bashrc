@@ -1,11 +1,6 @@
 #!/bin/bash
 
-for file in ~/.bash/*.bash; do
-	source $file
-done
-
 unset DISPLAY
-
 
 # load dev, but only if present and the shell is interactive
 if [[ -f /opt/dev/dev.sh ]] && [[ $- == *i* ]]; then
@@ -18,3 +13,7 @@ kubectl-short-aliases
 
 # cloudplatform: add Shopify clusters to your local kubernetes config
 export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}/Users/scott/.kube/config:/Users/scott/.kube/config.shopify.cloudplatform
+
+for file in ~/.bash/*.bash; do
+	source $file
+done

@@ -13,3 +13,5 @@ if [ -f /Users/scott/Downloads/google-cloud-sdk/completion.bash.inc ]; then
   source '/Users/scott/Downloads/google-cloud-sdk/completion.bash.inc'
 fi
 if [ -e /Users/scott/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/scott/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
