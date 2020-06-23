@@ -135,6 +135,8 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 
 
+set splitright
+
 cmap w!! w !sudo tee > /dev/null % 2>&1
 
 set wildignore+=.git/**,public/assets/**,vendor/**,log/**,tmp/**,Cellar/**,app/assets/images/**,_site/**,home/.vim/bundle/**,**/.gitkeep,**/.DS_Store,**/*.netrw*,node_modules/*
