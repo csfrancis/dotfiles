@@ -8,8 +8,10 @@ if [[ -f /opt/dev/dev.sh ]] && [[ $- == *i* ]]; then
 fi
 
 export PATH="$HOME/.yarn/bin:$PATH"
-for file in /Users/scott/src/github.com/Shopify/cloudplatform/workflow-utils/*.bash; do source ${file}; done
-kubectl-short-aliases
+if [[ -f /Users/scott/src/github.com/Shopify/cloudplatform ]]; then
+  for file in /Users/scott/src/github.com/Shopify/cloudplatform/workflow-utils/*.bash; do source ${file}; done
+  kubectl-short-aliases
+fi
 
 # cloudplatform: add Shopify clusters to your local kubernetes config
 export KUBECONFIG=${KUBECONFIG:+$KUBECONFIG:}/Users/scott/.kube/config:/Users/scott/.kube/config.shopify.cloudplatform
