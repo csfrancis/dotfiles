@@ -33,3 +33,5 @@ patternType = perl
 	helper = store --file /opt/dev/var/private/git_credential_store
 [commit]
 	gpgsign = true
+[fetch]
+	prune = true
