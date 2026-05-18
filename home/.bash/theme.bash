@@ -3,7 +3,7 @@
 PS1=''
 
 # Set the hostname if this isn't running in iTerm
-if [[ -z $ITERM_PROFILE ]]; then
+if [[ -z $ITERM_PROFILE ]] && [[ -z $GHOSTTY_SHELL_FEATURES ]]; then
   PS1='\[$RED\]\h '
 fi
 
