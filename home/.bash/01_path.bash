@@ -22,3 +22,7 @@ if [[ -d "${GOPATH}" ]]; then
 	export PATH="$PATH:$GOPATH/bin"
 fi
 
+if [[ -d "$HOME/.local/bin" ]]; then
+	export PATH="$HOME/.local/bin:$PATH"
+fi
+
