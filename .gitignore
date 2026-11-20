@@ -1,3 +1,4 @@
 /home/.config/
 !/home/.config/nvim/colors/*
 !/home/.config/nvim/init.vim
+/claude/statusline/last-input.json

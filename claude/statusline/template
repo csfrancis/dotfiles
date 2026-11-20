@@ -1,0 +1,18 @@
+# Claude Code status line template. Saved changes show on the next redraw.
+# One segment per line, joined by the separator. A segment is left out when any
+# {field} in it is missing. Full syntax, fields and costs: README.md
+#
+#   {field|filter|filter:arg}   a value, e.g. {cost.total_cost_usd|money}
+#   <red> <110> <#ff8800> <bold dim> <bg:236> </>   colors (</> resets)
+#   <heat:field:50:80>          green / yellow / red by that field's value
+
+@separator " <dim>·</> "
+
+<110>{model.id}</>
+{effort.level}
+<heat:context_window.used_percentage:50:80>{context_window.used_percentage|round}% ctx</>
+{cost.total_api_duration_ms|duration} think / {cost.total_duration_ms|duration} total
+{cost.total_cost_usd|money}
+<heat:rate_limits.five_hour.used_percentage:50:80>{rate_limits.five_hour.used_percentage|round}% 5h</> <dim>resets in {rate_limits.five_hour.resets_at|until}</>
+<heat:rate_limits.seven_day.used_percentage:50:80>{rate_limits.seven_day.used_percentage|round}% week</> <dim>resets {rate_limits.seven_day.resets_at|date:%a %-I:%M%p}</>
+{workspace.project_dir}

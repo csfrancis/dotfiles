@@ -27,3 +27,13 @@ for file in home/.[^.]*; do
     symlink $path $target
   fi
 done
+
+# Claude Code status line. ~/.claude holds other state, so only this folder is linked.
+statusline="$HOME/.claude/statusline"
+if [[ -d $statusline && ! -h $statusline ]]; then
+  echo -e "\x1B[33m~/.claude/statusline is a real folder. Move it aside, then rerun.\x1B[39m"
+else
+  mkdir -p "$HOME/.claude"
+  ln -nsf "$(pwd)/claude/statusline" "$statusline"
+  echo -e "\x1B[32m~/.claude/statusline is symlinked to your dotfiles.\x1B[39m"
+fi
