@@ -37,3 +37,13 @@ else
   ln -nsf "$(pwd)/claude/statusline" "$statusline"
   echo -e "\x1B[32m~/.claude/statusline is symlinked to your dotfiles.\x1B[39m"
 fi
+
+# Rex terminal config. ~/.config holds other apps' state, so only this folder is linked.
+rex="$HOME/.config/rex"
+if [[ -d $rex && ! -h $rex ]]; then
+  echo -e "\x1B[33m~/.config/rex is a real folder. Move it aside, then rerun.\x1B[39m"
+else
+  mkdir -p "$HOME/.config"
+  ln -nsf "$(pwd)/home/.config/rex" "$rex"
+  echo -e "\x1B[32m~/.config/rex is symlinked to your dotfiles.\x1B[39m"
+fi
