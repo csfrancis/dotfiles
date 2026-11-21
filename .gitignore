@@ -1,5 +1,8 @@
 /home/.config/*
 !/home/.config/rex/
-!/home/.config/nvim/colors/*
+!/home/.config/nvim/
+/home/.config/nvim/*
+!/home/.config/nvim/colors/
 !/home/.config/nvim/init.vim
+!/home/.config/nvim/nvim-pack-lock.json
 /claude/statusline/last-input.json
