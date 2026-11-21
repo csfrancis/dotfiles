@@ -21,8 +21,6 @@ default = nothing
 lineNumber = true
 patternType = perl
 
-[include]
-  path = ~/.gitconfig.local
 [diff]
 	algorithm = patience
 [protocol]
@@ -35,3 +33,7 @@ patternType = perl
 	gpgsign = true
 [fetch]
 	prune = true
+
+# Keep last so machine-local settings override everything above.
+[include]
+	path = ~/.gitconfig.local
